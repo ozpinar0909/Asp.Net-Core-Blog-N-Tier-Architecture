@@ -40,7 +40,7 @@ namespace BusinessLayer.Concrete
 
         public List<Category> GetList()
         {
-          return _efCategoryRepository.GetAll();
+            return _efCategoryRepository.GetAll();
         }
     }
 }
