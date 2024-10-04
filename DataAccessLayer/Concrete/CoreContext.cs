@@ -1,4 +1,4 @@
-﻿using EntityLayer;
+﻿using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,10 +10,11 @@ namespace DataAccessLayer.Concrete
 {
     public class CoreContext : DbContext
     {
-
-        public CoreContext(DbContextOptions<CoreContext> options) : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer("Server =DESKTOP-AORHBKT\\SQLEXPRESS; Database =CoreDb; Integrated Security= True; TrustServerCertificate = True;");
         }
+
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Category> Categories { get; set; }

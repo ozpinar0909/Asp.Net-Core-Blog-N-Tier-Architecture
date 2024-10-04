@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer
+namespace EntityLayer.Concrete
 {
     public class Writer
     {
@@ -14,7 +14,7 @@ namespace EntityLayer
         public int WriterName { get; set; }
         public int WriterAbout { get; set; }
         public int WriterMail { get; set; }
-        public int WriterPassword{ get; set; }
+        public int WriterPassword { get; set; }
         public int WriterImage { get; set; }
         public int WriterStatus { get; set; }
     }

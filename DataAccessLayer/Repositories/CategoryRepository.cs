@@ -1,6 +1,6 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
-using EntityLayer;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +21,7 @@ namespace DataAccessLayer.Repositories
 
         public List<Category> GetAll()
         {
-            return _coreContext.Set<Category>().ToList();
+            return _coreContext.Categories.ToList();
         }
 
         public Category GetById(int id)
