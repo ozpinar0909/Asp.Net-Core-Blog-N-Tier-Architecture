@@ -12,7 +12,7 @@ namespace DataAccessLayer.Repositories
 {
     public class BlogRepository : IBlogDal
     {
-        CoreContext _coreContext;
+        CoreContext? _coreContext;
         public void Delete(Blog entity)
         {
             _coreContext.Remove(entity);
@@ -27,7 +27,7 @@ namespace DataAccessLayer.Repositories
 
         public Blog GetById(int id)
         {
-         return _coreContext.Blogs.Find(id);
+            return _coreContext.Set<Blog>().Find(id);
         }
 
         public void Insert(Blog entity)

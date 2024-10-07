@@ -37,7 +37,7 @@ namespace DataAccessLayer.Repositories
 
         public void Update(Category entity)
         {
-            _coreContext.Add(entity);
+            _coreContext.Update(entity);
             _coreContext.SaveChanges();
         }
     }
